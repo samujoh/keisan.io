@@ -19,56 +19,94 @@
 <link rel="icon" href="favicon.ico"> 
 <link rel="apple-touch-icon" href="icon.png"> 
     <style>
-  table {
-    border-collapse: collapse;
-  }
-  td {
-    width: 50px;
-    height: 50px;
-    border: 1px solid black;
-    background-color: white;
-    cursor: pointer;
-  }
-</style>
+        table {
+            border-collapse: collapse;
+        }
+
+        td {
+            width: 60px;
+            height: 60px;
+            border: 3px solid #b0c4de;
+            background-color: #ffffff;
+        }
+
+        body {
+            margin: auto;
+            width:500px;
+            text-align: center;
+        }
+        .box{
+            margin:auto;
+            width:200px;
+        }
+
+        .hpInput {
+            width: 50px;
+        }
+    </style>
 </head>
+
 <body>
     <header>
-        <a href="index.html"><h1>PIXARTS</h1></a>
-        <p>ヘッダー</p>
+        <a href="index.html">
+            <h1>PIXARTSのロゴ</h1>
+        </a>
     </header>
+    <main>
+        <span>
+            <p>▲
+                <input type="text" placeholder="キャラ名">
+                <input type="number" placeholder="HP" class="hpInput">
+            </p>
+        </span>
+        <span>
+            <p>◀
+                <input type="text" placeholder="キャラ名">
+                <input type="number" placeholder="HP" class="hpInput">
+            </p>
+        </span>
+        <span>
+            <p>▶
+                <input type="text" placeholder="キャラ名">
+                <input type="number" placeholder="HP" class="hpInput">
+            </p>
+        </span>
+        
+        <div class="box">
+        <table>
+            <tr>
+                <td onclick="changeColor(this)"></td>
+                <td onclick="changeColor(this)"></td>
+                <td onclick="changeColor(this)"></td>
+            </tr>
+            <tr>
+                <td onclick="changeColor(this)"></td>
+                <td onclick="changeColor(this)"></td>
+                <td onclick="changeColor(this)"></td>
+            </tr>
+            <tr>
+                <td onclick="changeColor(this)"></td>
+                <td onclick="changeColor(this)"></td>
+                <td onclick="changeColor(this)"></td>
+            </tr>
+        </table>
+            </div>
+    </main>
 
-    <p>本文</p>
-    <a href="cal/keisan.html">計算</a>
-    <table id="clickableTable">
-  <tr>
-    <td onclick="changeColor(this)"></td>
-    <td onclick="changeColor(this)"></td>
-    <td onclick="changeColor(this)"></td>
-  </tr>
-  <tr>
-    <td onclick="changeColor(this)"></td>
-    <td onclick="changeColor(this)"></td>
-    <td onclick="changeColor(this)"></td>
-  </tr>
-  <tr>
-    <td onclick="changeColor(this)"></td>
-    <td onclick="changeColor(this)"></td>
-    <td onclick="changeColor(this)"></td>
-  </tr>
-</table>
+    <script>
+        function changeColor(cell) {
+            if (cell.style.backgroundColor === "rgb(114, 140, 173)") {
+                cell.style.backgroundColor = "#ffffff";
+            } else {
+                cell.style.backgroundColor = "#728cad";
+            }
+        }
+    </script>
 
-<script>
-  function changeColor(cell) {
-    if (cell.style.backgroundColor === "white") {
-      cell.style.backgroundColor = "black";
-    } else {
-      cell.style.backgroundColor = "white";
-    }
-  }
-</script>
 
     <footer>
-        <a href="#">フッター</a>
+        <p>連絡先とか</p>
+        <address>aaa@bbb.com</address>
     </footer>
 </body>
 </html>
